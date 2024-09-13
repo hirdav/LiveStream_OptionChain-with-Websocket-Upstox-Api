@@ -37,7 +37,7 @@ async def fetch_market_data():
     configuration = upstox_client.Configuration()
 
     api_version = '2.0'
-    configuration.access_token = access_token = 'eyJ0eXAiOiJKV1QiLCJrZXlfaWQiOiJza192MS4wIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiIzMjQzNDAiLCJqdGkiOiI2NmUzYjBhZGUxZDVhMzY2MzJhMWE0OWIiLCJpc011bHRpQ2xpZW50IjpmYWxzZSwiaWF0IjoxNzI2MTk3OTMzLCJpc3MiOiJ1ZGFwaS1nYXRld2F5LXNlcnZpY2UiLCJleHAiOjE3MjYyNjQ4MDB9.3kKG-cyNJdskbdm8KUhLkV3p2gpTAo63X3f1t9HuqA4'
+    configuration.access_token = access_token = 'eyJ0xxxxxxxY2UiLCJleHAiOjE3MjYxxxLkV3p2gpTAo63X3f1t9HuqA4'
 
     # Get market data feed authorization
     response = get_market_data_feed_authorize(
@@ -45,7 +45,7 @@ async def fetch_market_data():
 
     # Connect to the WebSocket with SSL context
     async with websockets.connect(response.data.authorized_redirect_uri, ssl=ssl_context) as websocket:
-        print('Connection established')
+        print('Connection established []')
 
         await asyncio.sleep(0)  # Wait for 1 second
 
